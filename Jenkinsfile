@@ -14,22 +14,32 @@ pipeline {
             }
         }
         
-        stage('DockerImageBuild') {
+        stage('BuildFrontImage') {
             agent { label 'DockerAgent' } 
             steps {
               dir('docker') {
                 sh '''#!/bin/bash
+                echo "REMOVING IMAGES" 
                 docker rmi djtoler/frontkube1:latest || true
                 docker rmi djtoler/backkube1:latest || true
-                cd front && docker build --no-cache -t djtoler/frontkube1 .
+                echo "FINISHED REMOVING IMAGES" 
+                echo "START FRONTEND BUILD" 
+                cd front && pwd && docker build --no-cache -t djtoler/frontkube1 .
                 echo "FINISHED BUILDING FRONTEND"
+              '''
+              }
+            }
+        }
+
+        stage('BuildBackImage') {
+            agent { label 'DockerAgent' } 
+            steps {
+              dir('docker') {
+                sh '''#!/bin/bash
                 pwd
                 echo "STARTING BACKEND BUILD" 
-                cd ../ && cd back && pwd && ls && docker build --no-cache -t djtoler/backkube1 .
+                cd back && pwd && docker build --no-cache -t djtoler/backkube1 .
                 echo "FINISHED BUILDING BACKEND"
-                pwd
-                // cd /home/ubuntu/docker_agent2/workspace/FinalTest_main/docker/front && pwd && ls && docker build --no-cache -t djtoler/frontkube1 .
-                // cd /home/ubuntu/docker_agent2/workspace/FinalTest_main/docker/back && pwd && ls && docker build --no-cache -t djtoler/backkube1 .
               '''
               }
             }
@@ -45,8 +55,8 @@ pipeline {
         stage('DockerHubPush') {
             agent { label 'DockerAgent' } 
             steps {
-                sh 'sudo docker push djtoler/frontkube1'
-                sh 'sudo docker push djtoler/backkube1'
+                sh 'docker push djtoler/frontkube1:latest'
+                sh 'docker push djtoler/backkube1:latest'
             }
         }
 
