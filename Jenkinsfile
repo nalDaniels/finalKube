@@ -20,6 +20,8 @@ pipeline {
               dir('docker') {
                 sh '''#!/bin/bash
                 echo "REMOVING IMAGES" 
+                df -h
+                df -h /tmp
                 docker image ls
                 docker ps
                 docker system prune -af
