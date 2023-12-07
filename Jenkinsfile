@@ -20,6 +20,7 @@ pipeline {
               dir('docker') {
                 sh '''#!/bin/bash
                 echo "REMOVING IMAGES" 
+                docker system prune -a
                 docker rmi djtoler/frontkube1:latest || true
                 docker rmi djtoler/backkube1:latest || true
                 echo "FINISHED REMOVING IMAGES" 
