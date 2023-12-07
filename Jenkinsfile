@@ -60,8 +60,8 @@ pipeline {
             agent { label 'DockerAgent' } 
             steps {
                 sh 'echo "PUSHING TO DOCKERHUB1" '
-                sh 'docker push djtoler/frontkube1:latest'
-                sh 'docker push djtoler/backkube1:latest'
+                sh 'sudo docker push djtoler/frontkube1:latest'
+                sh 'sudo docker push djtoler/backkube1:latest'
             }
         }
 
