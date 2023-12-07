@@ -22,8 +22,12 @@ pipeline {
                 pwd
                 docker rmi djtoler/frontkube1:latest || true
                 docker rmi djtoler/backkube1:latest || true
-                cd /home/ubuntu/docker_agent2/workspace/FinalTest_main/docker/front && pwd && ls && docker build --no-cache -t djtoler/frontkube1 .
-                cd /home/ubuntu/docker_agent2/workspace/FinalTest_main/docker/back && pwd && ls && docker build --no-cache -t djtoler/backkube1 .
+                cd front && docker build --no-cache -t djtoler/frontkube1 .
+                pwd
+                cd back && docker build --no-cache -t djtoler/backkube1 .
+                pwd
+                // cd /home/ubuntu/docker_agent2/workspace/FinalTest_main/docker/front && pwd && ls && docker build --no-cache -t djtoler/frontkube1 .
+                // cd /home/ubuntu/docker_agent2/workspace/FinalTest_main/docker/back && pwd && ls && docker build --no-cache -t djtoler/backkube1 .
               '''
               }
             }
