@@ -20,10 +20,10 @@ pipeline {
               dir('docker') {
                 sh '''#!/bin/bash
                 pwd
-                docker rmi djtoler/be_final3:latest || true
-                docker rmi djtoler/fe_final3:latest || true
-                cd /home/ubuntu/docker_agent/workspace/finalproject_main/docker/front && pwd && ls && docker build --no-cache -t djtoler/fe_final3 .
-                cd /home/ubuntu/docker_agent/workspace/finalproject_main/docker/back && pwd && ls && docker build --no-cache -t djtoler/be_final3 .
+                docker rmi djtoler/frontkube1:latest || true
+                docker rmi djtoler/backkube1:latest || true
+                cd /home/ubuntu/docker_agent/workspace/finalproject_main/docker/front && pwd && ls && docker build --no-cache -t djtoler/frontkube1 .
+                cd /home/ubuntu/docker_agent/workspace/finalproject_main/docker/back && pwd && ls && docker build --no-cache -t djtoler/backkube1 .
               '''
               }
             }
@@ -39,8 +39,8 @@ pipeline {
         stage('Push') {
             agent { label 'DockerAgent' } 
             steps {
-                sh 'sudo docker push djtoler/be_final3'
-                sh 'sudo docker push djtoler/fe_final3'
+                sh 'sudo docker push djtoler/frontkube1'
+                sh 'sudo docker push djtoler/backkube1'
             }
         }
 
@@ -48,8 +48,8 @@ pipeline {
             agent { label 'DockerAgent' } 
             steps {
                 sh 'pwd && ls'
-                sh 'cd docker && pwd && ls'
-                sh 'cd docker && docker compose up'
+                // sh 'cd docker && pwd && ls'
+                // sh 'cd docker && docker compose up'
             }
         }
     }

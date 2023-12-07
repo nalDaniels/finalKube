@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fpj-redis-cache
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: redis-cache
+  template:
+    metadata:
+      labels:
+        app: redis-cache
+    spec:
+      nodeSelector:
+        role: backend
+      containers:
+      - name: redis-cache
+        image: redis:latest
+        ports:
+        - containerPort: 6379
+        

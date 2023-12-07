@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fpj-backend-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: fpjbe
+  template:
+    metadata:
+      labels:
+        app: fpjbe
+    spec:
+      nodeSelector:
+        role: backend
+      containers:
+      - name: fpjbe
+        image: djtoler/backkube1:latest
+        ports:
+        - containerPort: 8000
+
+
