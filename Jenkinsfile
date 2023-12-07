@@ -56,5 +56,14 @@ pipeline {
         //         // sh 'cd docker && docker compose up'
         //     }
         // }
+
+        stage('DockerHubPush') {
+            agent { label 'KubernetesAgent' } 
+            steps {
+                sh '''#!/bin/bash
+                
+                '''
+            }
+        }
     }
 }

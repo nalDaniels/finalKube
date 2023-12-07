@@ -8,7 +8,7 @@
 
 # eksctl utils associate-iam-oidc-provider --cluster cluster07 --approve
 
-cd yamls 
+cd /home/ubuntu/final-kube/yamls 
 
 kubectl apply -f be-service.yaml
 kubectl apply -f fe-service.yaml
