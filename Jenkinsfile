@@ -24,7 +24,8 @@ pipeline {
                 docker rmi djtoler/backkube1:latest || true
                 cd front && docker build --no-cache -t djtoler/frontkube1 .
                 pwd
-                cd ../ && cd back && docker build --no-cache -t djtoler/backkube1 .
+                cd ../ && cd back && pwd && docker build --no-cache -t djtoler/backkube1 .
+                echo "should be backend^^"
                 pwd
                 // cd /home/ubuntu/docker_agent2/workspace/FinalTest_main/docker/front && pwd && ls && docker build --no-cache -t djtoler/frontkube1 .
                 // cd /home/ubuntu/docker_agent2/workspace/FinalTest_main/docker/back && pwd && ls && docker build --no-cache -t djtoler/backkube1 .
@@ -57,13 +58,13 @@ pipeline {
         //     }
         // }
 
-        stage('DockerHubPush') {
-            agent { label 'KubernetesAgent' } 
-            steps {
-                sh '''#!/bin/bash
-                
-                '''
-            }
-        }
+        // stage('DockerHubPush') {
+        //     agent { label 'KubernetesAgent' } 
+        //     steps {
+        //         sh '''#!/bin/bash
+
+        //         '''
+        //     }
+        // }
     }
 }
