@@ -15,7 +15,7 @@ import Quiz from "./afterLogin/Quiz";
 
 import "./App.scss";
 
-axios.defaults.baseURL = 'http://44.204.48.174:8000';
+const URL = 'http://fpjbackend-service:80';
 
 function App() {
   const URL = "";
