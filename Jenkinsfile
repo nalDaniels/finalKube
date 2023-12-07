@@ -24,7 +24,6 @@ pipeline {
                 df -h /tmp
                 docker image ls
                 docker ps
-                docker system prune -af
                 docker rmi djtoler/frontkube1:latest || true
                 docker rmi djtoler/backkube1:latest || true
                 echo "FINISHED REMOVING IMAGES" 
