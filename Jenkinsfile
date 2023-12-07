@@ -26,6 +26,7 @@ pipeline {
                 docker ps
                 docker rmi djtoler/frontkube1:latest || true
                 docker rmi djtoler/backkube1:latest || true
+                docker images -f "dangling=true" -q | xargs docker rmi
                 echo "FINISHED REMOVING IMAGES" 
                 echo "START FRONTEND BUILD" 
                 cd front && pwd && docker build --no-cache -t djtoler/frontkube1 .
@@ -60,6 +61,7 @@ pipeline {
             agent { label 'DockerAgent' } 
             steps {
                 sh 'echo "PUSHING TO DOCKERHUB1" '
+                sh 'docker image ls'
                 sh 'sudo docker push djtoler/frontkube1:latest'
                 sh 'sudo docker push djtoler/backkube1:latest'
             }
