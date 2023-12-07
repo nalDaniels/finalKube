@@ -1,5 +1,7 @@
 import axios from "axios";
 
+console.log("inside api")
+
 const URL = 'http://fpjbackend-service:80';
 
 export const addUser = async (data) => {
