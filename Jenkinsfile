@@ -55,6 +55,7 @@ pipeline {
         stage('DockerHubPush') {
             agent { label 'DockerAgent' } 
             steps {
+                sh 'echo "PUSHING TO DOCKERHUB" '
                 sh 'docker push djtoler/frontkube1:latest'
                 sh 'docker push djtoler/backkube1:latest'
             }
