@@ -2,13 +2,12 @@ import axios from "axios";
 
 console.log("inside api")
 
-axios.defaults.baseURL = 'http://fpjbackend-service:80';
+// axios.defaults.baseURL = 'http://fpjbackend-service:80';
 
-const URL = '';
 
 export const addUser = async (data) => {
   try {
-    return await axios.post(`${URL}/signup`, data);
+    return await axios.post(`/signup`, data);
   } catch (error) {
     console.log("Error in adding user", error);
   }

@@ -6,7 +6,7 @@ metadata:
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: instance
     alb.ingress.kubernetes.io/tags: Environment=staging
-    alb.ingress.kubernetes.io/subnets: "subnet-0320acce5f2641425, subnet-08d7d69c539b857c8"
+
 spec:
   ingressClassName: alb
   rules:

@@ -1,0 +1,3 @@
+NAME                              READY   STATUS    RESTARTS   AGE
+fpj-frontend-app-dd5769d6-2bs5w   1/1     Running   0          32m
+fpj-frontend-app-dd5769d6-sgb22   1/1     Running   0          32m

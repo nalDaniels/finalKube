@@ -15,13 +15,11 @@ import Quiz from "./afterLogin/Quiz";
 
 import "./App.scss";
 
-axios.defaults.baseURL = 'http://fpjbackend-service:80';
+// axios.defaults.baseURL = 'http://fpjbackend-service:80';
 
-const URL = '';
+
 
 function App() {
-  const URL = "";
-  console.log(URL, "<----URL")
   let tempValue = false;
   if (JSON.parse(localStorage.getItem("IsAuth")) !== null) {
     tempValue = JSON.parse(localStorage.getItem("IsAuth"));
@@ -29,14 +27,11 @@ function App() {
     localStorage.setItem("IsAuth", false);
   }
   const [isAuth, setIsAuth] = useState(tempValue);
-  // Sending Request For Checking Authentication
 
-  //const URL = process.env.REACT_APP_BACKEND_URL;
-  //console.log(URL)
   
   axios.defaults.withCredentials = true;
   const AuthUser = async () => {
-    await axios.get(`${URL}/auth`).then((response) => {
+    await axios.get(`/auth`).then((response) => {
       setIsAuth(response.data);
       localStorage.setItem("IsAuth", response.data);
     });

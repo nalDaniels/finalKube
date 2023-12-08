@@ -1,0 +1,20 @@
+Server:		10.100.0.10
+Address:	10.100.0.10:53
+
+Name:	fpjbackend-service.default.svc.cluster.local
+Address: 10.100.99.183
+
+** server can't find fpjbackend-service.cluster.local: NXDOMAIN
+
+** server can't find fpjbackend-service.svc.cluster.local: NXDOMAIN
+
+** server can't find fpjbackend-service.svc.cluster.local: NXDOMAIN
+
+** server can't find fpjbackend-service.cluster.local: NXDOMAIN
+
+
+** server can't find fpjbackend-service.ec2.internal: NXDOMAIN
+
+** server can't find fpjbackend-service.ec2.internal: NXDOMAIN
+
+pod "dns-test" deleted

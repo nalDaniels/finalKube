@@ -1,0 +1,23 @@
+Name:             fpjfrontend-ingress3
+Labels:           <none>
+Namespace:        default
+Address:          
+Ingress Class:    alb
+Default backend:  <default>
+Rules:
+  Host        Path  Backends
+  ----        ----  --------
+  *           
+              /   fpjfrontend-service-nodeport:80 (172.28.0.126:3000,172.28.69.69:3000)
+Annotations:  alb.ingress.kubernetes.io/scheme: internet-facing
+              alb.ingress.kubernetes.io/tags: Environment=staging
+              alb.ingress.kubernetes.io/target-type: instance
+Events:
+  Type     Reason             Age   From     Message
+  ----     ------             ----  ----     -------
+  Warning  FailedDeployModel  49m   ingress  Failed deploy model due to AccessDeniedException: User: arn:aws:sts::994181039877:assumed-role/eksctl-cluster07-addon-iamserviceaccount-kube-Role1-uTi5BfJWdagL/1702008342743275671 is not authorized to perform: wafv2:GetWebACLForResource on resource: arn:aws:wafv2:us-east-1:994181039877:regional/webacl/*/* with an explicit deny in a service control policy
+           status code: 400, request id: 72978dfe-03da-4161-93b8-5ab7cea29eb3
+  Warning  FailedDeployModel  32m  ingress  Failed deploy model due to AccessDeniedException: User: arn:aws:sts::994181039877:assumed-role/eksctl-cluster07-addon-iamserviceaccount-kube-Role1-uTi5BfJWdagL/1702008342743275671 is not authorized to perform: wafv2:GetWebACLForResource on resource: arn:aws:wafv2:us-east-1:994181039877:regional/webacl/*/* with an explicit deny in a service control policy
+           status code: 400, request id: 27f393d9-6648-44b1-a3fe-ab2087c03280
+  Warning  FailedDeployModel  15m  ingress  Failed deploy model due to AccessDeniedException: User: arn:aws:sts::994181039877:assumed-role/eksctl-cluster07-addon-iamserviceaccount-kube-Role1-uTi5BfJWdagL/1702008342743275671 is not authorized to perform: wafv2:GetWebACLForResource on resource: arn:aws:wafv2:us-east-1:994181039877:regional/webacl/*/* with an explicit deny in a service control policy
+           status code: 400, request id: 1b9f197c-9903-43f6-96aa-d3ddbd072423

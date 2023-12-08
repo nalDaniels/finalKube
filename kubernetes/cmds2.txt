@@ -1,5 +1,3 @@
-  187  nano fe_ingress.yaml 
-  188  kubectl apply -f fe_ingress.yaml
   189  kubectl get ingress
   190  eksctl create nodegroup --help
   191  cd ../..
@@ -998,3 +996,5 @@
  1184  git commit -m"reroute backend URL to Axios default3"
  1185  git push
  1186  history > cmds2.txt
+ 1187  cd kubernetes/
+ 1188  history > cmds2.txt
