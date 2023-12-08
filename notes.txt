@@ -1,6 +1,0 @@
-cho "STARTING BACKEND BUILD" 
-                cd ../ && cd back && pwd && ls && docker build --no-cache -t djtoler/backkube1 .
-                echo "FINISHED BUILDING BACKEND"
-                pwd
-                // cd /home/ubuntu/docker_agent2/workspace/FinalTest_main/docker/front && pwd && ls && docker build --no-cache -t djtoler/frontkube1 .
-                // cd /home/ubuntu/docker_agent2/workspace/FinalTest_main/docker/back && pwd && ls && docker build --no-cache -t djtoler/backkube1 .
