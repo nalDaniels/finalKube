@@ -39,7 +39,7 @@ const Login = () => {
       <div className={styles.formBox}>
         <img src="images/logo.png" alt="" />
         <h1>Quiz Network</h1>
-        <h2>Welcome Back2222</h2>
+        <h2>Welcome Back</h2>
         <p>Please enter your details</p>
         <div className={styles.inputBox}>
           <span>Username</span>
@@ -72,7 +72,7 @@ const Login = () => {
           {successMsg}
         </h5>
         <h6>
-          Don't have account? <Link to="/signup">Sign Up2222</Link>
+          Don't have account? <Link to="/signup">Sign Up</Link>
         </h6>
       </div>
     </div>

@@ -15,7 +15,7 @@ export const addUser = async (data) => {
 
 export const loginUser = async (data) => {
   try {
-    return await axios.post(`${URL}/login`, data);
+    return await axios.post(`/login`, data);
   } catch (error) {
     console.log("Error in logging in ", error);
   }
@@ -23,7 +23,7 @@ export const loginUser = async (data) => {
 
 export const logOutUser = () => {
   try {
-    return axios.get(`${URL}/logout`);
+    return axios.get(`/logout`);
   } catch (error) {
     console.log("Error in logging out", error);
   }
@@ -31,7 +31,7 @@ export const logOutUser = () => {
 
 export const addQuestion = async (data) => {
   try {
-    return await axios.post(`${URL}/addQuestion`, data);
+    return await axios.post(`/addQuestion`, data);
   } catch (error) {
     console.log("Error in adding question", error);
   }
@@ -39,7 +39,7 @@ export const addQuestion = async (data) => {
 
 export const updateQuestion = async (data) => {
   try {
-    return await axios.post(`${URL}/updateQuestion`, data);
+    return await axios.post(`/updateQuestion`, data);
   } catch (error) {
     console.log("Error in updating question", error);
   }
@@ -47,7 +47,7 @@ export const updateQuestion = async (data) => {
 
 export const getQuestions = () => {
   try {
-    return axios.get(`${URL}/getQuestions`);
+    return axios.get(`/getQuestions`);
   } catch (error) {
     console.log("Error in getting questions", error);
   }
@@ -55,7 +55,7 @@ export const getQuestions = () => {
 
 export const createQuiz = async (data) => {
   try {
-    return await axios.post(`${URL}/createQuiz`, data);
+    return await axios.post(`/createQuiz`, data);
   } catch (error) {
     console.log("Error in creating Quiz", error);
   }
@@ -63,7 +63,7 @@ export const createQuiz = async (data) => {
 
 export const getQuiz = () => {
   try {
-    return axios.get(`${URL}/getQuiz`);
+    return axios.get(`/getQuiz`);
   } catch (error) {
     console.log("Error in getting quiz", error);
   }
@@ -71,7 +71,7 @@ export const getQuiz = () => {
 
 export const getPlayQuiz = async (data) => {
   try {
-    return await axios.post(`${URL}/getPlayQuiz`, data);
+    return await axios.post(`/getPlayQuiz`, data);
   } catch (error) {
     console.log("Error in getting quiz", error);
   }
@@ -79,7 +79,7 @@ export const getPlayQuiz = async (data) => {
 
 export const checkAttempt = (data) => {
   try {
-    return axios.post(`${URL}/checkAttempt`, data);
+    return axios.post(`/checkAttempt`, data);
   } catch (error) {
     console.log("Error in checking attempt", error);
   }
@@ -87,7 +87,7 @@ export const checkAttempt = (data) => {
 
 export const addAttempt = (data) => {
   try {
-    return axios.post(`${URL}/addAttempt`, data);
+    return axios.post(`/addAttempt`, data);
   } catch (error) {
     console.log("Error in adding Attempt", error);
   }
@@ -111,7 +111,7 @@ export const getProfile = () => {
 
 export const getAttemptQuizes = () => {
   try {
-    return axios.get(`${URL}/getAttemptQuizes`);
+    return axios.get(`/getAttemptQuizes`);
   } catch (error) {
     console.log("Error in getting attempted quizes", error);
   }
