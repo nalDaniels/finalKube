@@ -76,13 +76,15 @@ pipeline {
         //     }
         // }
 
-        // stage('DockerHubPush') {
-        //     agent { label 'KubernetesAgent' } 
-        //     steps {
-        //         sh '''#!/bin/bash
-
-        //         '''
-        //     }
-        // }
+        stage('KubernetesRedeployPods') {
+            agent { label 'KubernetesAgent' } 
+            steps {
+              dir('kubernetes') {
+                sh '''#!/bin/bash
+                ./redeploy-pods.sh
+              '''
+              }
+            }
+        }
     }
 }
