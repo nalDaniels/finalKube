@@ -1,3 +1,191 @@
+    1  sudo nano /etc/systemd/system/code-server.service
+    2  sudo systemctl daemon-reload
+    3  sudo systemctl enable code-server.service
+    4  sudo systemctl start code-server.service
+    5  sudo systemctl status code-server.service
+    6  sudo systemctl start code-server.service
+    7  sudo systemctl status code-server.service
+    8  sudo nano /etc/systemd/system/code-server.service
+    9  aws --version
+   10  docker version
+   11  ls
+   12  cd ~
+   13  ls
+   14  cd /
+   15  ls
+   16  terraform version
+   17  terraform --version
+   18  cat auto-terraform.sh 
+   19  sudo apt install terraform
+   20  terraform --version
+   21  cat auto-vscode_install.sh 
+   22  nano auto-vscode_install.sh 
+   23  sudo systemctl start code-server
+   24  sudo systemctl status code-server
+   25  which code-server
+   26  sudo apt update
+   27  sudo apt upgrade -y
+   28  curl -fsSL https://code-server.dev/install.sh | sh
+   29  nano /etc/systemd/system/code-server.service
+   30  sudo nano /etc/systemd/system/code-server.service
+   31  sudo systemctl daemon-reload
+   32  sudo systemctl enable code-server.service
+   33  sudo systemctl start code-server.service
+   34  sudo systemctl status code-server.service
+   35  sudo home/ubuntu/.config/code-server/config.yaml 
+   36  sudo nano home/ubuntu/.config/code-server/config.yaml 
+   37  cd home/ubuntu/.config/code-server
+   38  cd/
+   39  ls -la
+   40  cd .config/
+   41  ls
+   42  cd code-server/
+   43  ls
+   44  nano config.yaml 
+   45  sudo systemctl stop code-server
+   46  sudo systemctl start code-server
+   47  sudo systemctl status code-server
+   48  terraform version
+   49  touch main.tf variables.tf terraform.tfvars
+   50  docker version
+   51  touch Dockerfile.backend
+   52  touch Dockerfile.frontend
+   53  nano Dockerfile.backend 
+   54  docker build dp9backend .
+   55  docker build -t dp9backend .
+   56  touch backend frontend
+   57  mkdir backend frontend
+   58  cd backend/
+   59  docker build -t dp9backend .
+   60  rm Dockerfile.backend Dockerfile
+   61  touch Dockerfile
+   62  docker build -t dp9backend .
+   63  docker login
+   64  docker image ls
+   65  docker push djtoler/dp9backend
+   66  docker image rm dp9backend:latest 
+   67  docker image -t build djtoler/dp9backend .
+   68  docker build image -t djtoler/dp9backend
+   69  docker build -t djtoler/dp9backend
+   70  docker build -t djtoler/dp9backend .
+   71  docker image ls
+   72  docker push djtoler/dp9backend
+   73  cd .. && cd frontend
+   74  docker build -t djtoler/dp9frontend .
+   75  docker push djtoler/dp9frontend
+   76  cd .. && cd backend
+   77  ls
+   78  mkdir dp9
+   79  cd dp9/
+   80  eksctl delete cluster --region=us-east-1 --name=cluster01
+   81  ls
+   82  cd dp9/
+   83  ls
+   84  mkdir eks_kubernetes_infrastructure && cd eks_kubernetes_infrastructure && touch eks_infrastructure.sh && chmod +x eks_infrastructure.sh
+   85  ls
+   86  nano eks_infrastructure.sh 
+   87  ls
+   88  mv eks_infrastructure.sh eks1_infrastructure.sh 
+   89  ls
+   90  nano eks2_service-deployment.sh
+   91  ls
+   92  chmod +x eks2_service-deployment.sh 
+   93  ls
+   94  nano eks2_service-deployment.sh
+   95  touch eks3_apply-service-deployment.sh && nano eks3_apply-service-deployment.sh
+   96  chmod +x eks3_apply-service-deployment.sh 
+   97  ls
+   98  touch auto-eks.sh && chmod +x auto-eks.sh
+   99  nano auto-eks.sh 
+  100  ls
+  101  history
+  102  mkdir ud_scripts
+  103  cd ud_scripts/
+  104  touch ud_jenkins.sh ud_docker.sh ud_terraform.sh
+  105  chmod +x *.sh
+  106  terraform init
+  107  terraform validate
+  108  terraform plan
+  109  terraform init
+  110  cd ..
+  111  terraform init
+  112  terraform validate
+  113  terraform plan
+  114  clear
+  115  terraform apply -auto-approve
+  116  git clone https://github.com/andmulLABS01/Deployment_9.git .
+  117  mkdir repo && cd repo && git clone https://github.com/andmulLABS01/Deployment_9.git .
+  118  cd ../ && cd terraform_kubernetes_infrastructure
+  119  touch main.tf vpc.tf variables.tf
+  120  curl -0 https://raw.githubusercontent.com/djtoler/automated_installation_scripts/main/apps/tf.tf
+  121  nano vpc.tf 
+  122  terraform init
+  123  terraform validate
+  124  terraform plan
+  125  nano vpc.tf 
+  126  terraform plan
+  127  terraform apply
+  128  cd ..
+  129  ls
+  130  cd Deployment9/
+  131  ls
+  132  cd frontend/
+  133  nano fe_deployment.yaml 
+  134  nano fe_service.yaml 
+  135  nano fe_ingress.yaml 
+  136  docker image ls
+  137  docker pull djtoler/dp9frontend:latest
+  138  docker build -t djtoler/dp9frontend:latest . 
+  139  cd ..
+  140  cd backend/
+  141  docker pull djtoler/dp9backend:latest
+  142  docker build -t djtoler/dp9backend:latest . 
+  143  history
+  144  docker push djtoler/dp9backend:latest
+  145  docker push djtoler/dp9frontend:latest
+  146  l
+  147  ls
+  148  clear
+  149  curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+  150  chmod +x ./kubectl
+  151  sudo mv ./kubectl /usr/local/bin/kubectl
+  152  curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
+  153  sudo mv /tmp/eksctl /usr/local/bin
+  154  eksctl version
+  155  eksctl create cluster cluster01  --vpc-private-subnets=subnet-02d4cc65e8dde7a07,subnet-0952efd7d50fc7f11  --vpc-public-subnets=subnet-003ea84136dc93f2e,subnet-0bcb542a46061faa1 --without-nodegroup
+  156  aws --version
+  157  aws configure
+  158  eksctl create cluster cluster01  --vpc-private-subnets=subnet-02d86c9ea286e343b,subnet-02825fc3bf3076539  --vpc-public-subnets=subnet-0f99eb3c8aaa33dfd,subnet-014e8e3336bd05060 --without-nodegroup
+  159  eksctl delete cluster --region=us-east-1 --name=cluster01
+  160  eksctl create cluster cluster01  --vpc-private-subnets=subnet-02d86c9ea286e343b,subnet-02825fc3bf3076539  --vpc-public-subnets=subnet-0f99eb3c8aaa33dfd,subnet-014e8e3336bd05060 --without-nodegroup
+  161  eksctl create cluster cluster02  --vpc-private-subnets=subnet-02d86c9ea286e343b,subnet-02825fc3bf3076539  --vpc-public-subnets=subnet-0f99eb3c8aaa33dfd,subnet-014e8e3336bd05060 --without-nodegroup
+  162  eksctl create cluster cluster03  --vpc-private-subnets=subnet-02d86c9ea286e343b,subnet-02825fc3bf3076539  --vpc-public-subnets=subnet-0f99eb3c8aaa33dfd,subnet-014e8e3336bd05060 --without-nodegroup
+  163  eksctl create nodegroup --cluster cluster03 --node-type t2.medium --nodes 2
+  164  kubectl config get-contexts
+  165  ls
+  166  nano be_deployment.yaml 
+  167  nano be_service.yaml 
+  168  kubectl apply -f be_deployment.yaml 
+  169  kubectl apply -f be_service.yaml 
+  170  eksctl utils associate-iam-oidc-provider --cluster cluster03 --approve
+  171  wget https://raw.githubusercontent.com/kura-labs-org/Template/main/iam_policy.json
+  172  aws iam create-policy --policy-name AWSLoadBalancerControllerIAMPolicy --policy-document file://iam_policy.json
+  173  eksctl create iamserviceaccount --cluster=cluster03 --namespace=kube-system --name=aws-load-balancer-controller --attach-policy-arn=arn:aws:iam::994181039877:policy/AWSLoadBalancerControllerIAMPolicy --approve
+  174  kubectl apply --validate=false -f https://github.com/jetstack/cert-manager/releases/download/v1.5.4/cert-manager.yaml
+  175  wget https://raw.githubusercontent.com/kura-labs-org/Template/main/v2_4_7_full.yaml
+  176  kubectl apply -k "github.com/aws/eks-charts/stable/aws-load-balancer-controller/crds"
+  177  ls
+  178  kubectl apply -f v2_4_7_full.yaml
+  179  touch ingress_class.yaml
+  180  nano ingress_class.yaml 
+  181  kubectl apply -f ingressClass.yaml
+  182  kubectl apply -f ingress_class.yaml
+  183  nano ingress_class.yaml 
+  184  kubectl apply -f ingress_class.yaml
+  185  cd ..
+  186  cd frontend/
+  187  nano fe_ingress.yaml 
+  188  kubectl apply -f fe_ingress.yaml
   189  kubectl get ingress
   190  eksctl create nodegroup --help
   191  cd ../..
@@ -605,396 +793,82 @@
   793  mkdir quiz-microservice
   794  cd quiz-microservice/
   795  touch index.js routes.js
-  796  kubectl delete -f be-service.yaml
-  797  cd yamls/
-  798  kubectl delete -f be-service.yaml
-  799  kubectl apply -f be-service.yaml
-  800  eksctl create cluster cluster06  --vpc-private-subnets=subnet-0e6f78738aea91837,subnet-0e30f47f5ef109fab  --vpc-public-subnets=subnet-08d7d69c539b857c8,subnet-0320acce5f2641425 --without-nodegroup
-  801  eksctl create nodegroup --cluster cluster06 --node-type t2.medium --nodes 2
-  802  eksctl create nodegroup --cluster cluster03 --name dp9backend --node-type t2.medium --nodes 2 --node-private-networking --subnet-ids subnet-02d86c9ea286e343b,subnet-02825fc3bf3076539 --node-labels "role=backend"
-  803  eksctl create nodegroup --cluster cluster06 --name fpbackend --node-type t2.medium --nodes 2 --node-private-networking --subnet-ids subnet-0e6f78738aea91837,subnet-0e30f47f5ef109fab --node-labels "role=backend"
-  804  eksctl utils associate-iam-oidc-provider --cluster cluster06 --approve
-  805  wget https://raw.githubusercontent.com/kura-labs-org/Template/main/iam_policy.json
-  806  eksctl create iamserviceaccount --cluster=cluster06 --namespace=kube-system --name=aws-load-balancer-controller --attach-policy-arn=arn:aws:iam::994181039877:policy/AWSLoadBalancerControllerIAMPolicy --approve
-  807  kubectl apply --validate=false -f https://github.com/jetstack/cert-manager/releases/download/v1.5.4/cert-manager.yaml
-  808  kubectl apply -k "github.com/aws/eks-charts/stable/aws-load-balancer-controller/crds"
-  809  kubectl apply -f v2_4_7_full.yaml 
-  810  kubectl apply -f be-service.yaml
-  811  kubectl apply -f fe-service.yaml
-  812  kubectl apply -f be-deployment.yaml
-  813  kubectl apply -f fe-deployment.yaml 
-  814  kubectl apply -f redis-service.yaml
-  815  kubectl apply -f redis-deployment.yaml
-  816  eksctl utils associate-iam-oidc-provider --cluster cluster06 --approve
-  817  cd ingress_yamls/
-  818  kubectl apply -f ingress_class.yaml
-  819  kubectl apply -f ingress.yaml
-  820  kubectl get pods
-  821  kubectl describe pod fpj-backend-app-757f6fd5db-5v254
-  822  kubectl describe pod fpj-backend-app-757f6fd5db-5v254 > be.txt
-  823  kubectl logs fpj-backend-app-757f6fd5db-5v254 
-  824  kubectl delete -f be-deployment.yaml
-  825  cd ..
-  826  kubectl delete -f be-deployment.yaml
-  827  kubectl apply -f be-deployment.yaml
-  828  kubectl get pods
-  829  kubectl logs fpj-frontend-app-bccc6f6c8-2t6g5
-  830  kubectl logs fpj-frontend-app-bccc6f6c8-2t6g5 > belogs.txt
-  831  kubectl get svc
-  832  history > cmds.txt
-  833  aws eks delete-cluster --name cluster06
-  834  aws eks list-nodegroups --cluster-name cluster06
-  835  aws eks delete-nodegroup --cluster-namecluster06> --nodegroup-nameng-3890b40d
-  836  kubectl get nodes --show-labels
-  837  kubectl get nodes --show-labels ≥ nodes.txt
-  838  kubectl get nodes --show-labels > nodes.txt
-  839  aws eks delete-nodegroup --cluster-name cluster06 --nodegroup-name ng-3890b40d
-  840  eksctl version
-  841  eksctl create cluster cluster05  --vpc-private-subnets=subnet-0e6f78738aea91837,subnet-0e30f47f5ef109fab  --vpc-public-subnets=subnet-08d7d69c539b857c8,subnet-0320acce5f2641425 --without-nodegroup
-  842  eksctl create nodegroup --cluster cluster05 --node-type t2.medium --nodes 2 --node-private-networking --subnet-ids subnet-0e6f78738aea91837,subnet-0e30f47f5ef109fab
-  843  ls
-  844  eksctl create nodegroup --cluster cluster05 --name fpbackend --node-type t2.medium --nodes 2 --node-private-networking --subnet-ids subnet-02d86c9ea286e343b,subnet-02825fc3bf3076539 --node-labels "role=backend"
-  845  eksctl create nodegroup --cluster cluster05 --name fpbackend --node-type t2.medium --nodes 2 --node-private-networking --subnet-ids subnet-0e6f78738aea91837,subnet-0e30f47f5ef109fab --node-labels "role=backend"
-  846  cd yamls/
-  847  ls
-  848  kubectl config get-contexts
-  849  kubectl -f *.yaml
-  850  kubectl apply -f *.yaml
-  851  ls
-  852  kubectl apply -f *.yaml
-  853  kubectl apply -f be-service.yaml
-  854  kubectl apply -f fe-service.yaml
-  855  kubectl apply -f be-deployment.yaml 
-  856  kubectl apply -f fe-deployment.yaml 
-  857  kubectl apply -f redis-service.yaml
-  858  kubectl apply -f redis-deployment.yaml 
-  859  eksctl utils associate-iam-oidc-provider --cluster cluster05 --approve
-  860  wget https://raw.githubusercontent.com/kura-labs-org/Template/main/iam_policy.json
-  861  aws iam create-policy --policy-name AWSLoadBalancerControllerIAMPolicy --policy-document file://iam_policy.json
-  862  eksctl create iamserviceaccount --cluster=cluster05 --namespace=kube-system --name=aws-load-balancer-controller --attach-policy-arn=arn:aws:iam::994181039877:policy/AWSLoadBalancerControllerIAMPolicy --approve
-  863  kubectl apply --validate=false -f https://github.com/jetstack/cert-manager/releases/download/v1.5.4/cert-manager.yaml
-  864  wget https://raw.githubusercontent.com/kura-labs-org/Template/main/v2_4_7_full.yaml
-  865  kubectl apply -k "github.com/aws/eks-charts/stable/aws-load-balancer-controller/crds"
-  866  kubectl apply -f v2_4_7_full.yaml 
-  867  cd ingress_yamls/
-  868  ls
-  869  kubectl apply -f ingress.yaml 
-  870  kubectl apply -f ingress_class.yaml 
-  871  kubectl apply -f ingress.yaml 
-  872  eksctl utils associate-iam-oidc-provider --cluster cluster05 --approve
-  873  aws elb describe-load-balancers
-  874  aws elbv2 describe-load-balancers
-  875  kubectl get svc
-  876  kubectl apply --validate=false -f https://github.com/jetstack/cert-manager/releases/download/v1.5.4/cert-manager.yaml
-  877  kubectl apply -k "github.com/aws/eks-charts/stable/aws-load-balancer-controller/crds"
-  878  kubectl apply -f v2_4_7_full.yaml 
-  879  cd ..
-  880  ls
-  881  kubectl apply -f v2_4_7_full.yaml 
-  882  history > commands2.txt
-  883  cd ingress_yamls/
-  884  kubectl apply -f ingress_class.yaml 
-  885  kubectl apply -f ingress.yaml 
-  886  kubectl get secrets -n kube-system
-  887  kubectl delete -f ingress_class.yaml
-  888  kubectl delete -f ingress.yaml
-  889  kubectl apply -f ingress_class.yaml 
-  890  kubectl apply -f ingress.yaml 
-  891  kubectl apply -f ingress_class.yaml 
-  892  cd ..
-  893  nano +804 v2_4_7_full.yaml 
-  894  eksctl utils associate-iam-oidc-provider --cluster cluster05 --approve
-  895  eksctl create iamserviceaccount --cluster=cluster05 --namespace=kube-system --name=aws-load-balancer-controller --attach-policy-arn=arn:aws:iam::994181039877:policy/AWSLoadBalancerControllerIAMPolicy --approve
-  896  kubectl apply --validate=false -f https://github.com/jetstack/cert-manager/releases/download/v1.5.4/cert-manager.yaml
-  897  kubectl apply -k "github.com/aws/eks-charts/stable/aws-load-balancer-controller/crds"
-  898  kubectl apply -f v2_4_7_full.yaml 
-  899  kubectl delete -f ingress_class.yaml
-  900  kubectl delete -f ingress.yaml
-  901  kubectl apply -f ingress_class.yaml 
-  902  cd ingress_yamls/
-  903  kubectl delete -f ingress_class.yaml
-  904  kubectl delete -f ingress.yaml
-  905  kubectl apply -f ingress_class.yaml 
-  906  kubectl delete -f ingress.yaml
-  907  kubectl apply -f ingress.yaml 
-  908  cd ..
-  909  kubectl delete -f be-deployment.yaml 
-  910  kubectl apply -f be-deployment.yaml 
-  911  kubectl delete -f redis-service.yaml
-  912  kubectl apply -f redis-service.yaml
-  913  kubectl apply -f fe-deployment.yaml 
-  914  kubectl get nodes
-  915  kubectl get nodes --show-labels
-  916  kubectl get nodes --show-labels > nodelabes.txt
-  917  kubectl get pods -o wide
-  918  ls
-  919  kubectl -f apply redis-deployment.yaml 
-  920  kubectl apply -f redis-deployment.yaml 
-  921  aws ec2 describe-subnets --filters "Name=tag:Name,Values=us-east-1b-k8"
-  922  aws elb describe-load-balancers
-  923  aws elbv2 describe-load-balancers
-  924  cd ingress_yamls/clear
-  925  kubectl apply -f ingress.yaml 
-  926  cd ..
-  927  eksctl create iamserviceaccount --cluster=cluster05 --namespace=kube-system --name=aws-load-balancer-controller --attach-policy-arn=arn:aws:iam::994181039877:policy/AWSLoadBalancerControllerIAMPolicy --approve
-  928  eksctl create iamserviceaccount --cluster=cluster05 --namespace=kube-system --name=aws-load-balancer-controller --attach-policy-arn=arn:aws:iam::994181039877:policy/AWSLoadBalancerControllerIAMPolicy --approve > serv.txt
-  929  eksctl create iamserviceaccount --cluster=cluster05 --namespace=kube-system --name=aws-load-balancer-controller --attach-policy-arn=arn:aws:iam::994181039877:policy/AWSLoadBalancerControllerIAMPolicy --approve --override-existing-serviceaccounts
-  930  kubectl delete -f ingress.yaml C
-  931  cd ingress_yamls/
-  932  kubectl delete -f ingress.yaml 
-  933  clear
-  934  kubectl apply -f ingress.yaml 
-  935  kubectl delete -f ingress.yaml 
-  936  ls
-  937  kubectl apply -f ingress.yaml 
-  938  eksctl update iamserviceaccount --help
-  939  eksctl update iamserviceaccount -c cluster05 --approve
-  940  aws iam create-policy --policy-name AWSLoadBalancerControllerIAMPolicy --policy-document file://iam_policy.json
-  941  cd ..
-  942  aws iam create-policy --policy-name AWSLoadBalancerControllerIAMPolicy --policy-document file://iam_policy.json
-  943  eksctl create iamserviceaccount --cluster=cluster05 --namespace=kube-system --name=aws-load-balancer-controller --attach-policy-arn=arn:aws:iam::994181039877:policy/AWSLoadBalancerControllerIAMPolicy --approve eksctl create iamserviceaccount --cluster=cluster05 --namespace=kube-system --name=aws-load-balancer-controller --attach-policy-arn=arn:aws:iam::994181039877:policy/AWSLoadBalancerControllerIAMPolicy --approve
-  944  eksctl create iamserviceaccount --cluster=cluster05 --namespace=kube-system --name=aws-load-balancer-controller --attach-policy-arn=arn:aws:iam::994181039877:policy/AWSLoadBalancerControllerIAMPolicy --approve --override-existing-serviceaccounts
-  945  kubectl delete -f be-deployment.yaml 
-  946  kubectl apply -f be-deployment.yaml 
-  947  kubectl describe deploy LOAD_BALANCER_CONTROLLER -n kube-system | grep -i "Service Account"
-  948  eksctl get nodegroup --cluster cluster05
-  949  eksctl delete nodegroup --cluster cluster05 --name ng-f34569f6
-  950  eksctl create nodegroup --cluster cluster05 --node-type t2.medium --nodes 2 
-  951  kubectl delete -f ingress.yaml 
-  952  cd ingress_yaml
-  953  cd ingress_yamls/
-  954  kubectl delete -f ingress.yaml 
-  955  kubectl apply -f ingress.yaml 
-  956  eksctl delete cluster --name cluster05
-  957  eksctl delete cluster --name cluster06
-  958  ls
-  959  sudo apt update
-  960  sudo apt install redis-server
-  961  cd dp9/kubernetes_infrastructure_tf/
-  962  ls
-  963  terrafor init
-  964  terraform init
-  965  terraform plan
-  966  terraform apply
-  967  cd ../../
-  968  ls
-  969  cat auto-github_repo_create.sh 
-  970  mkdir final-kube
-  971  cd final-kube/
-  972  cd..
-  973  cd ..
-  974  ls
-  975  ./auto-github_repo_create.sh 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 finalKube
-  976  cd final-kube/
-  977  git remote add origin https://github.com/djtoler/finalKube.git
-  978  git init
-  979  git switch -b main
-  980  git checkout -b main
-  981  git remote add origin https://github.com/djtoler/finalKube.git
-  982  git clone https://github.com/djtoler/finalKube
-  983  rm-rf finalKube/
-  984  rm -rf finalKube/
-  985  git clone https://github.com/djtoler/kurafpj
-  986  ls
-  987  cd kurafpj/
-  988  ls
-  989  git add .
-  990  git commit -m"first commit"
-  991  git push
-  992  cd ..
-  993  git push
-  994  cd kurafpj/
-  995  kubectl 
-  996  cd kura
-  997  ls
-  998  ls -la
-  999  rm -rf .git
- 1000  cd ..
- 1001  ls -la
- 1002  git push origin main
- 1003  git push
- 1004  git push --set-upstream origin main
- 1005  git add .
- 1006  git commit -m"testing"
- 1007  cp kurafpj/ .
- 1008  ls
- 1009  copy -r kurafpj/ .
- 1010  cp -r kurafpj/ .
- 1011  pwd
- 1012  cp -r kurafpj/ /home/ubuntu/final-kube
- 1013  ls
- 1014  git add .
- 1015  git commit -m"org files"
- 1016  git push
- 1017  git push --set-upstream origin main
- 1018  git push --set-upstream --force origin main
- 1019  cd kurafpj/
- 1020  mv * ../
- 1021  ls
- 1022  cd ..
- 1023  ls
- 1024  git add .
- 1025  git commit -m"moved files to root"
- 1026  git push
- 1027  git add .
- 1028  git commit -m"updates URLs for Kube"
- 1029  git push
- 1030  touch create-cluster-sh && chmod +x create-cluster.sh
- 1031  touch create-cluster.sh && chmod +x create-cluster.sh
- 1032  ls
- 1033  rm create-cluster-sh 
- 1034  ls
- 1035  mkdir yamls
- 1036  rm -rf yamls/
- 1037  history > cmds.txt
- 1038  ls
- 1039  ./create-cluster.sh 
- 1040  cd yamls/amls
- 1041  ls
- 1042  pwd
- 1043  cd yamls/
- 1044  ls
- 1045  cd ..
- 1046  ls
- 1047  ./create-cluster.sh 
- 1048  cd yamls/
- 1049  kubectl apply -f ingress.yaml 
- 1050  cd docker/front/
- 1051  docker build -t frontkube .
- 1052  docker image ls
- 1053  docker rmi $(docker images -a -q)
- 1054  docker rmi --force $(docker images -a -q)
- 1055  docker build -t djtoler/frontkube .
- 1056  docker tag frontkube djtoler/frontkube:latest
- 1057  docker image ls
- 1058  cd ..
- 1059  cd back/
- 1060  ls
- 1061  docker build -t djtoler/backkube .
- 1062  docker push djtoler/frontkube:latest
- 1063  cd ..
- 1064  cd front/
- 1065  docker push djtoler/frontkube:latest
- 1066  docker build -t djtoler/frontkube1 .
- 1067  docker image ls
- 1068  docker push djtoler/frontkube1:latest
- 1069  cd ..
- 1070  ls
- 1071  cd back/
- 1072  ls
- 1073  docker build -t djtoler/backkube1 .
- 1074  docker imaage ls
- 1075  docker image ls
- 1076  docker push djtoler/backkube1:latest
- 1077  cd ../..
- 1078  git add .
- 1079  git commmit -m"updated yamls, Jenkinsfile, rebuilt and pushed new images"
- 1080  git commit -m"updated yamls, Jenkinsfile, rebuilt and pushed new images"
- 1081  git push
- 1082  git branch
- 1083  git add .
- 1084  git commit -m"test"
- 1085  git push
- 1086  git add .
- 1087  git commit -m"changed Build step paths"
- 1088  git push
- 1089  cd ..
- 1090  git add .
- 1091  cd final-kube/
- 1092  git add .
- 1093  git commit -m"refixed paths to Dockerfiles"
- 1094  git push
- 1095  git add .
- 1096  git commit -m"refixed paths to Dockerfiles2"
- 1097  git add .
- 1098  git commit -m"refixed paths to Dockerfiles3"
- 1099  git push
- 1100  git add .
- 1101  git commit -m"refixed paths to Dockerfiles4"
- 1102  git push
- 1103  git add .
- 1104  git commit -m"refixed paths to Dockerfiles5"
- 1105  git push
- 1106  cd yamls/
- 1107  ls
- 1108  touch redeploy-pods.sh && chmod +x redeploy-pods.sh
- 1109  pwd
- 1110  git add .
- 1111  git commit -m"automate pod deployment"
- 1112  cd ..
- 1113  git add .
- 1114  git commit -m"automate pod deployment1"
- 1115  git push
- 1116  git add .
- 1117  git commit -m"automate pod deployment2"
- 1118  git push
- 1119  git add .
- 1120  git commit -m"automate pod deployment3"
- 1121  git push
- 1122  git add .
- 1123  git commit -m"automate pod deployment4"
- 1124  git push
- 1125  docker image ls
- 1126  docker system prune -a
- 1127  docker image ls
- 1128  git add .
- 1129  git commit -m"automate pod deployment5"
- 1130  git add .
- 1131  git commit -m"automate pod deployment6"
- 1132  git push
- 1133  dh -f
- 1134  df -h
- 1135  git add .
- 1136  git commit -m"automate pod deployment7"
- 1137  git push
- 1138  df -i
- 1139  npm cache clean --force
- 1140  du -hsx /* | sort -rh | head -10
- 1141  sudo du -hsx /* | sort -rh | head -10 > space.txt
- 1142  docker info
- 1143  git add .
- 1144  git commit -m"automate pod deployment8"
- 1145  git push
- 1146  git add .
- 1147  git commit -m"automate pod deployment9"
- 1148  git push
- 1149  df -h /tmp
- 1150  git add .
- 1151  git commit -m"automate pod deployment10"
- 1152  git push
- 1153  git add .
- 1154  git commit -m"automate pod deployment11"
- 1155  git push
- 1156  git add .
- 1157  git commit -m"automate pod deployment12"
- 1158  git push
- 1159  git add .
- 1160  git commit -m"automate pod deployment13"
- 1161  git push
- 1162  kubectl delete deployment be-deployment.yaml
- 1163  kubectl get deployments
- 1164  history
- 1165  history > cmds2.txt
- 1166  kubectl delete -f be-deployment.yaml
- 1167  cd kubernetes/
- 1168  kubectl delete -f be-deployment.yaml
- 1169  kubectl apply -f be-deployment.yaml 
- 1170  kubectl delete -f fe-deployment.yaml
- 1171  kubectl apply -f fe-deployment.yaml 
- 1172* 
- 1173  git commit -m"reroute backend URL to Axios default"
- 1174  git push
- 1175  kubectl delete -f fe-deployment.yaml
- 1176  kubectl apply -f fe-deployment.yaml 
- 1177  kubectl delete -f fe-deployment.yaml
- 1178  kubectl apply -f fe-deployment.yaml 
- 1179  git add .
- 1180  git commit -m"reroute backend URL to Axios default2"
- 1181  cd ../..
- 1182  cd final-kube/
- 1183  git add .
- 1184  git commit -m"reroute backend URL to Axios default3"
- 1185  git push
- 1186  history > cmds2.txt
- 1187  cd kubernetes/
- 1188  history > cmds2.txt
+  796  sudo apt update
+  797  sudo apt install redis-server
+  798  cd dp9/kubernetes_infrastructure_tf/
+  799  ls
+  800  terrafor init
+  801  terraform init
+  802  terraform plan
+  803  terraform apply
+  804  cd ../../
+  805  ls
+  806  cat auto-github_repo_create.sh 
+  807  mkdir final-kube
+  808  cd final-kube/
+  809  cd..
+  810  cd ..
+  811  ls
+  812  ./auto-github_repo_create.sh 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 finalKube
+  813  cd final-kube/
+  814  git remote add origin https://github.com/djtoler/finalKube.git
+  815  git init
+  816  git switch -b main
+  817  git checkout -b main
+  818  git remote add origin https://github.com/djtoler/finalKube.git
+  819  git clone https://github.com/djtoler/finalKube
+  820  rm-rf finalKube/
+  821  rm -rf finalKube/
+  822  git clone https://github.com/djtoler/kurafpj
+  823  ls
+  824  cd kurafpj/
+  825  ls
+  826  git add .
+  827  git commit -m"first commit"
+  828  git push
+  829  cd ..
+  830  git push
+  831  cd kurafpj/
+  832  kubectl 
+  833  cd kura
+  834  ls
+  835  ls -la
+  836  rm -rf .git
+  837  cd ..
+  838  ls -la
+  839  git push origin main
+  840  git push
+  841  git push --set-upstream origin main
+  842  git add .
+  843  git commit -m"testing"
+  844  cp kurafpj/ .
+  845  ls
+  846  copy -r kurafpj/ .
+  847  cp -r kurafpj/ .
+  848  pwd
+  849  cp -r kurafpj/ /home/ubuntu/final-kube
+  850  ls
+  851  git add .
+  852  git commit -m"org files"
+  853  git push
+  854  git push --set-upstream origin main
+  855  git push --set-upstream --force origin main
+  856  cd kurafpj/
+  857  mv * ../
+  858  ls
+  859  cd ..
+  860  ls
+  861  git add .
+  862  git commit -m"moved files to root"
+  863  git push
+  864  git add .
+  865  git commit -m"updates URLs for Kube"
+  866  git push
+  867  touch create-cluster-sh && chmod +x create-cluster.sh
+  868  touch create-cluster.sh && chmod +x create-cluster.sh
+  869  ls
+  870  rm create-cluster-sh 
+  871  ls
+  872  mkdir yamls
+  873  rm -rf yamls/
+  874  history > cmds.txt
