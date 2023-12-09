@@ -2,7 +2,7 @@
 
 #############!!!!!!!CHANGE LINE 804 IN "v2_4_7_full.yaml" TO THE NAME OF THE CLUSTER WERE CREATING!!!!!!!!!!#################
 ############!!!!!!!!!!!CHANGE ALL CLUSTER REFERENCES TO THE CLUSTER NAME WERE CREATING!!!!!!!!!!!!!!#######################
-
+#######!!!!!!!!!CHANGE ALL SUBNET REFERENCES TO THE CURRENT SUBNETS WERE USING, MUST BE AT LEAST 2 PUBLIC, 2 PRIVATE!!!!!#######
 eksctl create cluster cluster11  --vpc-private-subnets=subnet-0e6f78738aea91837,subnet-0e30f47f5ef109fab  --vpc-public-subnets=subnet-08d7d69c539b857c8,subnet-0320acce5f2641425 --without-nodegroup
 
 eksctl create nodegroup --cluster cluster11 --node-type t2.medium --nodes 2 
